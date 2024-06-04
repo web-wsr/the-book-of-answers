@@ -15,17 +15,33 @@ body {
 
 
 button {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #aaa;
-    font-size: 14px;
-    padding: 1px 10px;
+    background-color: #4CAF50;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
+}
+
+button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 
 /* 主界面 */
+body,
+h1,
+p,
+button {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .main {
     width: 100%;
     position: absolute;
@@ -35,8 +51,26 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("background.jpg");
+    background-image: url("background.webp");
     background-size: cover;
+
+}
+
+
+h1 {
+    animation: fadeInDown 1s ease forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .answerWrap {
@@ -45,7 +79,7 @@ button {
     width: 550px;
     height: 350px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
 
 }
 
@@ -76,7 +110,10 @@ button {
     transform: translateX(50%) rotateY(10deg);
 }
 
+
+
 .answer .container {
+    color: black;
     height: 90%;
     display: flex;
     align-items: center;
